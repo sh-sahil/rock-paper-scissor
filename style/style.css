@@ -40,3 +40,9 @@ body{
     font-size: 15px;
     cursor: pointer;
 }
+
+.autoplay{
+    padding: 8px 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
