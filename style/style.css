@@ -36,13 +36,21 @@ body{
 }
 
 .reset{
-    padding: 8px 10px;
+    padding: 9.5px 11px;
     font-size: 15px;
     cursor: pointer;
+    color:white;
+    background-color: red;
+    border: none;
+    border-radius: 2px;
 }
 
 .autoplay{
-    padding: 8px 10px;
+    color:white;
+    background-color: green;
+    border: none;
+    padding: 9.5px 12px;
     font-size: 15px;
     cursor: pointer;
+    border-radius: 2px;
 }

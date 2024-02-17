@@ -32,12 +32,46 @@ autoplay = () => {
             playGame(playerMove);
         },1000)
         isAutoPlaying = true;
+        document.querySelector('.js-autoplay')
+            .innerHTML = 'Stop';
     }
     else{
         clearInterval(setIntervalId);
         isAutoPlaying = false;
+
+        document.querySelector('.js-autoplay')
+            .innerHTML = 'Auto Play'
     }
 }
+
+document.querySelector('.js-resetScore')
+    .addEventListener('click',() => {resetScore()});
+
+document.querySelector('.js-autoplay')
+    .addEventListener('click',()=>{autoplay()})
+
+document.querySelector('.js-rock-button')
+    .addEventListener('click',()=>{playGame('Rock')})
+
+document.querySelector('.js-paper-button')
+    .addEventListener('click',()=>{playGame('Paper')})
+
+document.querySelector('.js-scissors-button')
+    .addEventListener('click',()=>{playGame('Scissors')})
+
+
+document.body.addEventListener('keydown', (event) => {
+    if(event.key === 'r'){
+        playGame('Rock')
+    }
+    else if(event.key === 'p'){
+        playGame('Paper')
+    }
+    else if(event.key === 's'){
+        playGame('Scissors')
+    }
+
+})
 
 function playGame(playerMove) {
     computerChoice = pickComputerMove();
